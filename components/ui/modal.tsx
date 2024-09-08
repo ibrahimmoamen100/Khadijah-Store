@@ -12,11 +12,6 @@ interface ModelProps {
 }
 
 const Modal: React.FC<ModelProps> = ({ open, onClose, children }) => {
-  const onChange = (open: boolean) => {
-    if (!open) {
-      onClose();
-    }
-  };
   return (
     <Transition show={open} as={Fragment} appear>
       <Dialog as="div" className="relative z-10" onClose={onClose}>

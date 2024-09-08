@@ -1,7 +1,7 @@
 "use client";
 
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import useCart from "@/hooks/use-cart";
 import Currency from "@/components/ui/currency";
 import Button from "@/components/ui/button";

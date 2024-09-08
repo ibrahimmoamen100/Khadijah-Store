@@ -1,5 +1,4 @@
 import { Billboard as BillboardType } from "@/types";
-import Link from "next/link";
 
 interface BillboardProps {
   data: BillboardType;

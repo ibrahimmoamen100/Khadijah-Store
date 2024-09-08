@@ -1,9 +1,7 @@
 import Image from "next/image";
 import { X } from "lucide-react";
-import { toast } from "react-hot-toast";
 import IconButton from "@/components/ui/icon-button";
 import useCart from "@/hooks/use-cart";
-import { useEffect, useState } from "react";
 import Currency from "@/components/ui/currency";
 import { Product } from "@/types";
 
