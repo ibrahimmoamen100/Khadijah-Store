@@ -20,7 +20,7 @@ const NavbarActions = () => {
     return null;
   }
   return (
-    <div className="flex gap-x-4 ml-auto items-center ">
+    <div className="flex gap-x-4  items-center ">
       <Button
         onClick={() => router.push("/cart")}
         className="flex items-center rounded-full bg-black px-4 py-2"
