@@ -2,6 +2,7 @@
 import { cn } from "@/lib/utils";
 import { Category } from "@/types";
 import Link from "next/link";
+
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 import {
@@ -12,10 +13,9 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from "./ui/navigation-menu";
-import Container from "./ui/container";
-import { Popover, PopoverButton, PopoverPanel } from "@headlessui/react";
+} from "@/components/ui/navigation-menu";
 import { useState } from "react";
+import React from "react";
 
 interface MainNavProps {
   data: Category[];
@@ -31,31 +31,72 @@ const MainNav: React.FC<MainNavProps> = ({ data }) => {
   }));
 
   return (
-    <nav className=" flex items-center ml-auto text-base  ">
-      <button onClick={() => setIsOpen(!isOpen)}>منتجاتنا</button>
-      <motion.ul
-        className=" bg-slate-200 absolute w-[100vw] left-0 top-20  z-20"
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: isOpen ? 1 : 0, y: isOpen ? 2 : -20 }}
-        transition={{ duration: 0.3 }}
-      >
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-7xl m-auto px-4 sm:px-6 lg:px-8">
-          {routes.map((route) => (
-            <Link
-              key={route.href}
-              href={route.href}
-              className={cn(
-                "text-sm font-medium transition-colors hover:text-black p-2   ",
-                route.active ? "text-black" : "text-neutral-500"
-              )}
-            >
-              {route.label}
+    <nav className=" sm:flex items-center ml-auto relative text-base gap-4 hidden ">
+      <NavigationMenu>
+        <NavigationMenuList>
+          <NavigationMenuItem>
+            <NavigationMenuTrigger>المنتجات</NavigationMenuTrigger>
+            <NavigationMenuContent>
+              <ul className="flex flex-col w-[120px] gap-3 p-4 md:w-[140px] md:grid-cols-2 lg:w-[160px] ">
+                {routes.map((route) => (
+                  <Link
+                    key={route.href}
+                    href={route.href}
+                    className={cn(
+                      "text-sm font-medium transition-colors hover:text-black p-2   ",
+                      route.active ? "text-black" : "text-neutral-500"
+                    )}
+                  >
+                    {route.label}
+                  </Link>
+                ))}
+              </ul>
+            </NavigationMenuContent>
+          </NavigationMenuItem>
+          <NavigationMenuItem>
+            <Link href="/docs" legacyBehavior passHref>
+              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                الخدمات والاحكام{" "}
+              </NavigationMenuLink>
             </Link>
-          ))}
-        </div>
-      </motion.ul>
+          </NavigationMenuItem>
+          <NavigationMenuItem>
+            <Link href="/docs" legacyBehavior passHref>
+              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                نظام التقسيط
+              </NavigationMenuLink>
+            </Link>
+          </NavigationMenuItem>
+        </NavigationMenuList>
+      </NavigationMenu>
     </nav>
   );
 };
 
 export default MainNav;
+
+const ListItem = React.forwardRef<
+  React.ElementRef<"a">,
+  React.ComponentPropsWithoutRef<"a">
+>(({ className, title, children, ...props }, ref) => {
+  return (
+    <li>
+      <NavigationMenuLink asChild>
+        <a
+          ref={ref}
+          className={cn(
+            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+            className
+          )}
+          {...props}
+        >
+          <div className="text-sm font-medium leading-none">{title}</div>
+          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+            {children}
+          </p>
+        </a>
+      </NavigationMenuLink>
+    </li>
+  );
+});
+ListItem.displayName = "ListItem";

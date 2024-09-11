@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Container from "./ui/container";
 import MainNav from "./main-nav";
 import getCategories from "@/actions/get-categories";
 import NavbarActions from "./navbar-actions";
@@ -13,9 +12,9 @@ const Navbar = async () => {
         <Link className=" flex  gap-x-2 " href="/">
           <p className="font-bold text-4xl">خديجه ستور </p>
         </Link>
-        <div className="flex flex-row justify-around items-center w-full gap-6">
+        <div className="flex flex-row justify-around items-center w-full gap-6 relative">
           <MainNav data={categories} />
-          <NavbarActions />
+          <NavbarActions data={categories} />
         </div>
       </div>
     </div>
