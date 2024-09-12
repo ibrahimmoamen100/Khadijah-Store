@@ -4,7 +4,6 @@ import { Category } from "@/types";
 import Link from "next/link";
 
 import { usePathname } from "next/navigation";
-import { motion } from "framer-motion";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -14,7 +13,6 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
-import { useState } from "react";
 import React from "react";
 
 interface MainNavProps {
@@ -22,7 +20,6 @@ interface MainNavProps {
 }
 const MainNav: React.FC<MainNavProps> = ({ data }) => {
   const pathname = usePathname();
-  const [isOpen, setIsOpen] = useState(false);
 
   const routes = data.map((route) => ({
     href: `/category/${route.id}`,
