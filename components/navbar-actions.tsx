@@ -121,11 +121,11 @@ const NavbarActions: React.FC<MainNavProps> = ({ data }) => {
           >
             {routes.map((route) => (
               <Button
+                key={route.href}
                 onClick={() => router.push("/cart")}
                 className="flex items-center rounded-full text-center justify-center text-xs text-white  bg-transparent border mb-2 border-gray-600 px-4 py-2"
               >
                 <Link
-                  key={route.href}
                   href={route.href}
                   className={cn(
                     "text-xs font-medium transition-colors hover:text-black  text-center  ",

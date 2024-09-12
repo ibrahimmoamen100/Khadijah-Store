@@ -1,16 +1,10 @@
-import Link from "next/link";
 import Container from "./ui/container";
-import {
-  BsWhatsapp,
-  BsFacebook,
-  BsTelegram,
-  BsTelephoneFill,
-} from "react-icons/bs";
+import { BsTelephoneFill } from "react-icons/bs";
 import NavMedia from "./ui/nav-media";
 
 const TopNav = () => {
   return (
-    <div className="bg-neutral-200">
+    <div className="bg-[#dcddd8]">
       <Container>
         <div className="flex h-auto py-3 items-center justify-between px-4">
           <div className="flex flex-row gap-2 hover:scale-125 transition hover:text-neutral-600 cursor-pointer">
