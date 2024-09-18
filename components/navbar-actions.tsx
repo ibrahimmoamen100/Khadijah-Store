@@ -50,12 +50,12 @@ const NavbarActions: React.FC<MainNavProps> = ({ data }) => {
       </Button>
       <Button
         onClick={() => router.push("/cart")}
-        className="hidden items-center rounded-full text-center justify-center text-white sm:flex  bg-black px-4 py-2"
+        className="hidden items-center rounded-full text-center justify-center text-white sm:flex  bg-main_dark px-4 py-2"
       >
         <span className="ml-2 text-sm font-medium  text-white  rounded-full mx-2">
           {cart.items.length}
         </span>
-        <ShoppingBag size={20} color="white" />
+        <ShoppingBag size={20} color="white" className="text-main_dark" />
       </Button>
       <motion.div
         className="fixed w-[240px] h-[100vh] bg-white top-0 right-0 z-[5001] flex flex-col justify-between items-center overflow-y-scroll overflow-x-hidden"
@@ -87,6 +87,7 @@ const NavbarActions: React.FC<MainNavProps> = ({ data }) => {
             </span>
           </Button>
           <Link
+            onClick={() => setShow(false)}
             href="/cart"
             className={cn(
               "text-sm font-medium transition-colors hover:text-gray-700    flex items-center rounded-full text-center justify-center text-black  bg-transparent border mb-2 border-gray-600 px-4 py-2 "
@@ -122,7 +123,7 @@ const NavbarActions: React.FC<MainNavProps> = ({ data }) => {
             {routes.map((route) => (
               <Button
                 key={route.href}
-                onClick={() => router.push("/cart")}
+                onClick={() => setShow(false)}
                 className="flex items-center rounded-full text-center justify-center text-xs text-white  bg-transparent border mb-2 border-gray-600 px-4 py-2"
               >
                 <Link
@@ -138,6 +139,7 @@ const NavbarActions: React.FC<MainNavProps> = ({ data }) => {
             ))}
           </motion.div>
           <Link
+            onClick={() => setShow(false)}
             href="/cart"
             className={cn(
               "text-sm font-medium transition-colors hover:text-gray-700   flex items-center rounded-full text-center justify-center text-black  bg-transparent border mt-2 border-gray-600 px-4 py-2 "

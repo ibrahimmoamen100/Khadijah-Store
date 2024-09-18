@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+
 const {
   default: flattenColorPalette,
 } = require("tailwindcss/lib/util/flattenColorPalette");
@@ -29,6 +30,12 @@ const config: Config = {
       colors: {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        main_red: "#E64F3A",
+        green_dark: "#1F4F27",
+        green_light: "#93C555",
+        main_yellow: "#F39C4C",
+        main_dark: "#1D2A36",
+        main_white: "#FADED0",
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",

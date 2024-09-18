@@ -8,19 +8,19 @@ const NavMedia = () => {
         href="/"
         className="hover:scale-125 transition hover:text-neutral-500"
       >
-        <BsWhatsapp className="text-3xl" />
+        <BsWhatsapp className="text-3xl text-main_dark" />
       </Link>
       <Link
         href="/"
         className="hover:scale-125 transition hover:text-neutral-500"
       >
-        <BsFacebook className="text-3xl" />
+        <BsFacebook className="text-3xl text-main_dark" />
       </Link>
       <Link
         href="/"
         className="hover:scale-125 transition hover:text-neutral-500"
       >
-        <BsTelegram className="text-3xl" />
+        <BsTelegram className="text-3xl text-main_dark" />
       </Link>
     </>
   );
