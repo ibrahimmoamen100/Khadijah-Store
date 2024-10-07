@@ -12,7 +12,7 @@ interface BillboardProps {
 }
 
 const Billboard: React.FC<BillboardProps> = ({ data }) => {
-  const images = [data.imageUrl, img4.src, img5.src, img3.src];
+  const images = [img4.src, img5.src, img3.src];
   return (
     <div className=" overflow-hidden w-full mb-20">
       <ImagesSlider className="md:h-[40rem] h-[60vh] " images={images}>
