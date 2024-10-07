@@ -2,8 +2,7 @@
 import { Billboard as BillboardType } from "@/types";
 import { ImagesSlider } from "./ui/images-slider";
 import { motion } from "framer-motion";
-import img1 from "@/images/img3.png";
-import img2 from "@/images/preview (2).webp";
+
 import img3 from "@/images/btateen.png";
 import img4 from "@/images/img4.png";
 import img5 from "@/images/bed.png";
