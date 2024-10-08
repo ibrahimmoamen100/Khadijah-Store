@@ -2,7 +2,6 @@ import Link from "next/link";
 import MainNav from "./main-nav";
 import getCategories from "@/actions/get-categories";
 import NavbarActions from "./navbar-actions";
-import logo from "@/images/2.png";
 import Image from "next/image";
 
 export const revalidate = 0;
@@ -14,9 +13,9 @@ const Navbar = async () => {
         <Link className=" flex  gap-x-2  justify-center items-center" href="/">
           <Image
             src="/image/logo2.png"
-            alt="المرج ستور"
+            alt="متجر المرج "
             className=" "
-            title="المرج ستور"
+            title="متجر المرج "
             width={180}
             height={180}
           />
