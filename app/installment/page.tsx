@@ -1,8 +1,7 @@
 import React from "react";
 import Image from "next/image";
-type Props = {};
 
-export default function Installment({}: Props) {
+export default function Installment() {
   return (
     <div className="w-full h-screen flex  ">
       <div className="max-w-7xl mx-auto  w-full py-4 flex flex-col space-y-10 mt-20 p-4">
