@@ -13,13 +13,15 @@ const Navbar = async () => {
       <div className="  flex h-auto items-center max-w-7xl py-2 m-auto px-2 sm:px-6 lg:px-8">
         <Link className=" flex  gap-x-2  justify-center items-center" href="/">
           <Image
-            src={logo}
-            alt="خديجه ستور"
-            className="w-36  "
-            title="خديجه ستور"
+            src="/image/logo2.png"
+            alt="المرج ستور"
+            className=" "
+            title="المرج ستور"
+            width={180}
+            height={180}
           />
         </Link>
-        <div className="flex flex-row justify-around items-center w-full gap-6 relative">
+        <div className="flex flex-row justify-around items-center w-full gap-6 md:mr-8 mr-2 relative">
           <MainNav data={categories} />
           <NavbarActions data={categories} />
         </div>

@@ -46,7 +46,7 @@ const NavbarActions: React.FC<MainNavProps> = ({ data }) => {
   };
 
   return (
-    <div className="flex gap-x-4 sm:ml-0  items-center ml-auto">
+    <div className="flex gap-x-4 sm:mr-0  items-center mr-auto">
       <Button
         className="flex items-center rounded-full bg-black px-4 py-2 sm:hidden "
         onClick={() => setShow(true)}
