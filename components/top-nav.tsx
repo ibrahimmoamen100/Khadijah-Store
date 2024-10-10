@@ -8,9 +8,8 @@ const TopNav = () => {
       <Container>
         <div className="flex h-auto py-3 items-center justify-between px-4">
           <div className="flex flex-row gap-2 hover:scale-125 transition hover:text-neutral-600 cursor-pointer">
+            <span className="font-semibold text-main_dark">01024911062</span>
             <BsTelephoneFill className="text-2xl text-main_dark" />
-
-            <span className="font-semibold text-main_dark">201024911062</span>
           </div>
           <div className="flex flex-row gap-4">
             <NavMedia />
