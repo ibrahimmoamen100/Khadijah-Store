@@ -23,16 +23,12 @@ const Filter: React.FC<FilterProps> = ({ data, name, valueKey }) => {
 
     const query = {
       ...current,
-      [valueKey]: id,
+      [valueKey]: current[valueKey] === id ? undefined : id, // Toggle filter
     };
-
-    if (current[valueKey] === id) {
-      query[valueKey] = null;
-    }
 
     const url = qs.stringifyUrl(
       {
-        url: window.location.href,
+        url: window.location.pathname, // Use pathname instead of full URL
         query,
       },
       { skipNull: true }
@@ -47,17 +43,16 @@ const Filter: React.FC<FilterProps> = ({ data, name, valueKey }) => {
       <hr className="my-4" />
       <div className="flex flex-wrap gap-2">
         {data.map((filter) => (
-          <div key={filter.id} className="flex items-center">
-            <Button
-              className={cn(
-                "rounded-md text-sm text-gray-800 p-2 bg-white border border-gray-300",
-                selectedValue === filter.id && "bg-black text-white"
-              )}
-              onClick={() => onClick(filter.id)}
-            >
-              {filter.name}
-            </Button>
-          </div>
+          <Button
+            key={filter.id}
+            className={cn(
+              "rounded-md text-sm text-gray-800 p-2 bg-white border border-gray-300",
+              selectedValue === filter.id && "bg-black text-white"
+            )}
+            onClick={() => onClick(filter.id)}
+          >
+            {filter.name}
+          </Button>
         ))}
       </div>
     </div>

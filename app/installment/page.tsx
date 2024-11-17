@@ -28,7 +28,7 @@ export default function Installment() {
           />
         </div>
         <Separator />
-        <div className="max-w-2xl  space-y-4 flex flex-col p-4">
+        <div className="max-w-4xl  space-y-4 flex flex-col p-4">
           <h1 className="text-3xl font-bold text-black flex justify-start">
             {" "}
             الاسأله الشائعه

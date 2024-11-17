@@ -26,14 +26,29 @@ const Info: React.FC<InfoProps> = ({ data }) => {
       <div className="flex flex-col gap-y-6">
         <div className="flex items-center gap-x-4">
           <h3 className="font-semibold text-black">Size:</h3>
-          <div>{data?.size?.name}</div>
+          <div className="flex items-center gap-x-4">
+            {data?.sizes.map((size) => (
+              <div key={size.id} className="">
+                {" "}
+                {size.name}
+              </div>
+            ))}
+          </div>
         </div>
         <div className="flex items-center gap-x-4">
           <h3 className="font-semibold text-black">Color:</h3>
-          <div
-            className="w-6 h-6  rounded-full border border-gray-600"
-            style={{ backgroundColor: data?.color?.value }}
-          />
+
+          {data?.colors.map((color) => (
+            <div key={color.id} className="">
+              {" "}
+              <div
+                className="w-6 h-6  rounded-full border border-gray-600"
+                style={{
+                  backgroundColor: color.value,
+                }}
+              />{" "}
+            </div>
+          ))}
         </div>
       </div>
       <div className="mt-10 flex justify-center gap-x-3">

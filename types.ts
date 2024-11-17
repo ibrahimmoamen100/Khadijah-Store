@@ -16,16 +16,10 @@ export interface Product {
   name: string;
   price: number;
   isFeatured: boolean;
-  size: Size;
-  color: Color;
+  sizes: Size[];
+  colors: Color[];
   images: Image[];
 }
-
-export interface Image {
-  id: string;
-  url: string;
-}
-
 export interface Size {
   id: string;
   name: string;
@@ -36,4 +30,9 @@ export interface Color {
   id: string;
   name: string;
   value: string;
+}
+
+export interface Image {
+  id: string;
+  url: string;
 }
