@@ -11,8 +11,9 @@ import { Input } from "@/components/ui/input";
 
 const Summary = () => {
   const searchParams = useSearchParams();
+  const [loading, setLoading] = useState(false);
+
   const [customerInfo, setCustomerInfo] = useState({
-    name: "",
     address: "",
     city: "",
     country: "",
@@ -35,6 +36,8 @@ const Summary = () => {
   }, 0);
   console.log(`${process.env.NEXT_PUBLIC_API_URL}/checkout`);
   const onCheckout = async () => {
+    setLoading(true);
+
     try {
       const response = await axios.post(
         `${process.env.NEXT_PUBLIC_API_URL}/checkout`,
@@ -53,6 +56,8 @@ const Summary = () => {
     } catch (error) {
       console.error(error);
       toast.error("An error occurred during checkout.");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -71,9 +76,9 @@ const Summary = () => {
         <Input
           type="text"
           placeholder="الاسم"
-          value={customerInfo.name}
+          value={customerInfo.country}
           onChange={(e) =>
-            setCustomerInfo({ ...customerInfo, name: e.target.value })
+            setCustomerInfo({ ...customerInfo, country: e.target.value })
           }
         />
         <Input
@@ -92,14 +97,7 @@ const Summary = () => {
             setCustomerInfo({ ...customerInfo, city: e.target.value })
           }
         />
-        <Input
-          type="text"
-          placeholder="البلد"
-          value={customerInfo.country}
-          onChange={(e) =>
-            setCustomerInfo({ ...customerInfo, country: e.target.value })
-          }
-        />
+
         <Input
           type="number"
           placeholder="رقم التليفون"
@@ -114,7 +112,7 @@ const Summary = () => {
         onClick={onCheckout}
         className="w-full mt-6"
       >
-        الدفع
+        {loading ? "جاري الدفع..." : "ادفع"}
       </Button>
     </div>
   );
