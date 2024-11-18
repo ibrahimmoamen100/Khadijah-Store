@@ -12,6 +12,7 @@ import { Input } from "@/components/ui/input";
 const Summary = () => {
   const searchParams = useSearchParams();
   const [customerInfo, setCustomerInfo] = useState({
+    name: "",
     address: "",
     city: "",
     country: "",
@@ -70,9 +71,17 @@ const Summary = () => {
         <Input
           type="text"
           placeholder="الاسم"
-          value={customerInfo.country}
+          value={customerInfo.name}
           onChange={(e) =>
-            setCustomerInfo({ ...customerInfo, country: e.target.value })
+            setCustomerInfo({ ...customerInfo, name: e.target.value })
+          }
+        />
+        <Input
+          type="text"
+          placeholder="العنوان"
+          value={customerInfo.address}
+          onChange={(e) =>
+            setCustomerInfo({ ...customerInfo, address: e.target.value })
           }
         />
         <Input
@@ -85,10 +94,10 @@ const Summary = () => {
         />
         <Input
           type="text"
-          placeholder="العنوان"
-          value={customerInfo.address}
+          placeholder="البلد"
+          value={customerInfo.country}
           onChange={(e) =>
-            setCustomerInfo({ ...customerInfo, address: e.target.value })
+            setCustomerInfo({ ...customerInfo, country: e.target.value })
           }
         />
         <Input
