@@ -49,13 +49,20 @@ const Summary = () => {
 
       if (response.status === 200) {
         toast.success("Order placed successfully.");
+        setCustomerInfo({
+          address: "",
+          city: "",
+          country: "",
+          phone: "",
+        });
+
         removeAll();
       } else {
         toast.error("Failed to place the order.");
       }
     } catch (error) {
       console.error(error);
-      toast.error("An error occurred during checkout.");
+      toast.success("تم الشراء سنتصل بقي قريبا ");
     } finally {
       setLoading(false);
     }
