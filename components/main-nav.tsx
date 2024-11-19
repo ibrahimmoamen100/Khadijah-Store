@@ -50,10 +50,25 @@ const MainNav: React.FC<MainNavProps> = ({ data }) => {
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>
+
           <NavigationMenuItem>
             <Link href="/installment" legacyBehavior passHref>
               <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                الخدمات والاحكام{" "}
+                التوصيل والشحن
+              </NavigationMenuLink>
+            </Link>
+          </NavigationMenuItem>
+          <NavigationMenuItem>
+            <Link href="/installment" legacyBehavior passHref>
+              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                اضافه منتجي
+              </NavigationMenuLink>
+            </Link>
+          </NavigationMenuItem>
+          <NavigationMenuItem>
+            <Link href="/qustion" legacyBehavior passHref>
+              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                الأسأله الشائعه
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>

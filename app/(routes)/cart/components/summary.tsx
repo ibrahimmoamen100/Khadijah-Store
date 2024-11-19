@@ -48,7 +48,7 @@ const Summary = () => {
       );
 
       if (response.status === 200) {
-        toast.success("Order placed successfully.");
+        toast.success("تم ارسال طلبك وسنتصل بك قريبا.");
         setCustomerInfo({
           address: "",
           city: "",
@@ -62,7 +62,7 @@ const Summary = () => {
       }
     } catch (error) {
       console.error(error);
-      toast.success("تم الشراء سنتصل بقي قريبا ");
+      toast.error("في مشكله في الطلب   ");
     } finally {
       setLoading(false);
     }
@@ -119,7 +119,7 @@ const Summary = () => {
         onClick={onCheckout}
         className="w-full mt-6"
       >
-        {loading ? "جاري الدفع..." : "ادفع"}
+        {loading ? "جاري الطلب..." : "اطلب"}
       </Button>
     </div>
   );

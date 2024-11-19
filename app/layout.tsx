@@ -23,8 +23,10 @@ export default function RootLayout({
         <ToastProvider />
         <TopNav />
         <Navbar />
-        {children}
-        <Footer />
+        <div className="min-h-screen flex flex-col max-w-7xl mx-auto">
+          {children}
+          <Footer />
+        </div>
       </body>
     </html>
   );

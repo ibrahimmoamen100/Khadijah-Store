@@ -111,6 +111,15 @@ const NavbarActions: React.FC<MainNavProps> = ({ data }) => {
           >
             الخدمات والاحكام
           </Link>
+          <Link
+            onClick={handleClick}
+            href="/cart"
+            className={cn(
+              "text-sm font-medium transition-colors hover:text-gray-700    flex items-center rounded-full text-center justify-center text-black  bg-transparent border mb-2 border-gray-600 px-4 py-2 "
+            )}
+          >
+            اريد اضافه منتج لي
+          </Link>
 
           <Button
             onClick={() => setShowDropdown(!showDropdown)}
