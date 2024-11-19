@@ -1,7 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import { AccordionQustion } from "@/components/accordion-qustuin";
-import { Separator } from "@/components/ui/separator";
 
 export default function Installment() {
   return (
@@ -15,21 +13,7 @@ export default function Installment() {
             نحن نوفر لك نظام تقسيط مرن يساعدك على شراء المنتجات التي تحتاجها
             بسهولة. إليك التفاصيل:
           </p>
-          <div className="mb-6">
-            <h2 className="text-2xl font-semibold text-gray-700 mb-3">
-              1. مقدم الدفع:
-            </h2>
-            <ul className="list-disc pl-6 text-gray-600 space-y-2">
-              <li>
-                يمكنك دفع 10% مقدمًا من سعر المنتج واستكمال باقي المبلغ على
-                أقساط.
-              </li>
-              <li>
-                أقصى مدة للتقسيط هي 6 شهور، أو حتى سنة كاملة، مع بقاء المنتج في
-                المخزن حتى انتهاء الأقساط بالكامل.
-              </li>
-            </ul>
-          </div>
+
           <div className="mb-6">
             <h2 className="text-2xl font-semibold text-gray-700 mb-3">
               2. خيارات الدفع المتقدمة:
@@ -48,31 +32,56 @@ export default function Installment() {
             </h2>
             <ul className="list-disc pl-6 text-gray-600 space-y-2">
               <li>
-                المنتجات التي يزيد سعرها عن 8000 جنيه: يمكن تقسيطها على مدة تصل
-                إلى 6 شهور.
+                <strong> المنتجات التي يزيد سعرها عن 5000 جنيه </strong>
+                <ul className="list-disc pl-6 space-y-2">
+                  <li>
+                    يمكن تقسيطها على مدة تبدأ من شهر وحتى 6 شهور كحد أقصى.
+                  </li>
+                  <li>
+                    يتم إضافة نسبة زيادة 7% لكل شهر على السعر الأصلي للمنتج.
+                  </li>
+                </ul>
               </li>
+
               <li>
-                المنتجات التي يتراوح سعرها بين 5000 جنيه و8000 جنيه: يمكن
-                تقسيطها على مدة تصل إلى 5 شهور فقط.
+                <strong>
+                  المنتجات التي يتراوح سعرها بين 3000 جنيه و5000 جنيه
+                </strong>
+                <ul className="list-disc pl-6 space-y-2">
+                  <li>
+                    يمكن تقسيطها على مدة تبدأ من شهر وحتى 6 شهور كحد أقصى.
+                  </li>
+                  <li>
+                    يتم إضافة نسبة زيادة 9% لكل شهر على السعر الأصلي للمنتج.
+                  </li>
+                </ul>
               </li>
+
               <li>
-                المنتجات التي يتراوح سعرها بين 1000 جنيه و2000 جنيه: يمكن
-                تقسيطها على شهر واحد.
-              </li>
-              <li>
-                المنتجات التي يقل سعرها عن 1000 جنيه: يمكن تقسيطها على أسبوعين
-                فقط.
+                <strong> المنتجات التي يقل سعرها عن 3000 جنيه </strong>
+                <ul className="list-disc pl-6 space-y-2">
+                  <li>
+                    يمكن تقسيطها على مدة تبدأ من شهر وحتى 6 شهور كحد أقصى.
+                  </li>
+                  <li>
+                    يتم إضافة نسبة زيادة 11% لكل شهر على السعر الأصلي للمنتج.
+                  </li>
+                </ul>
               </li>
             </ul>
           </div>
-          <div>
+          <div className="mb-6">
             <h2 className="text-2xl font-semibold text-gray-700 mb-3">
-              4. استثناءات:
+              1. مقدم الدفع:
             </h2>
             <ul className="list-disc pl-6 text-gray-600 space-y-2">
               <li>
-                المنتجات التي يقل سعرها عن 5000 جنيه غير مؤهلة للتقسيط طويل
-                المدى، ويمكن تسديدها خلال شهر واحد او شهرين فقط.
+                يمكنك دفع 10% مقدمًا من سعر المنتج واستكمال باقي المبلغ على
+                أقساط.
+              </li>
+              <li>
+                أقصى مدة للتقسيط هي 6 شهور، مع بقاء المنتج في المخزن حتى انتهاء
+                الأقساط بالكامل.
               </li>
             </ul>
           </div>
