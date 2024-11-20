@@ -102,25 +102,25 @@ const NavbarActions: React.FC<MainNavProps> = ({ data }) => {
           >
             الرئيسيه
           </Link>
-          <Link
-            onClick={handleClick}
-            href="/cart"
-            className={cn(
-              "text-sm font-medium transition-colors hover:text-gray-700    flex items-center rounded-full text-center justify-center text-black  bg-transparent border mb-2 border-gray-600 px-4 py-2 "
-            )}
-          >
-            الخدمات والاحكام
-          </Link>
-          <Link
-            onClick={handleClick}
-            href="/cart"
-            className={cn(
-              "text-sm font-medium transition-colors hover:text-gray-700    flex items-center rounded-full text-center justify-center text-black  bg-transparent border mb-2 border-gray-600 px-4 py-2 "
-            )}
-          >
-            اريد اضافه منتج لي
-          </Link>
 
+          <Link
+            onClick={handleClick}
+            href="/qustion"
+            className={cn(
+              "text-sm font-medium transition-colors hover:text-gray-700    flex items-center rounded-full text-center justify-center text-black  bg-transparent border mb-2 border-gray-600 px-4 py-2 "
+            )}
+          >
+            الاسأله الشائعه
+          </Link>
+          <Link
+            onClick={handleClick}
+            href="/cart"
+            className={cn(
+              "text-sm font-medium transition-colors hover:text-gray-700    flex items-center rounded-full text-center justify-center text-black  bg-transparent border mb-2 border-gray-600 px-4 py-2 "
+            )}
+          >
+            الشحن والتوصيل
+          </Link>
           <Button
             onClick={() => setShowDropdown(!showDropdown)}
             className={cn(
@@ -163,9 +163,10 @@ const NavbarActions: React.FC<MainNavProps> = ({ data }) => {
               </Button>
             ))}
           </motion.div>
+
           <Link
             onClick={handleClick}
-            href="/cart"
+            href="/installment"
             className={cn(
               "text-sm font-medium transition-colors hover:text-gray-700   flex items-center rounded-full text-center justify-center text-black  bg-transparent border mt-2 border-gray-600 px-4 py-2 "
             )}

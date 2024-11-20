@@ -30,13 +30,11 @@ export default function Installment() {
             <h2 className="text-2xl font-semibold text-gray-700 mb-3">
               3. الشروط الخاصة بالتقسيط حسب سعر المنتج:
             </h2>
+            <h3>يمكن تقسيطها على مدة تبدأ من شهر وحتى 6 شهور كحد أقصى.</h3>
             <ul className="list-disc pl-6 text-gray-600 space-y-2">
               <li>
                 <strong> المنتجات التي يزيد سعرها عن 5000 جنيه </strong>
                 <ul className="list-disc pl-6 space-y-2">
-                  <li>
-                    يمكن تقسيطها على مدة تبدأ من شهر وحتى 6 شهور كحد أقصى.
-                  </li>
                   <li>
                     يتم إضافة نسبة زيادة 7% لكل شهر على السعر الأصلي للمنتج.
                   </li>
