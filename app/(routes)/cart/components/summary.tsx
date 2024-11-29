@@ -1,6 +1,5 @@
 "use client";
 
-import axios from "axios";
 import { useEffect, useState } from "react";
 import useCart from "@/hooks/use-cart";
 import Currency from "@/components/ui/currency";
@@ -35,6 +34,7 @@ const Summary = () => {
     return total + Number(item.price);
   }, 0);
   const onCheckout = () => {
+    setLoading(true);
     if (
       !customerInfo.phone ||
       !customerInfo.address ||
@@ -71,7 +71,7 @@ const Summary = () => {
     );
 
     // WhatsApp URL
-    const whatsappURL = `https://wa.me/01024911062?text=${message}`;
+    const whatsappURL = `https://wa.me/201024911062?text=${message}`;
 
     // Redirect to WhatsApp
     window.location.href = whatsappURL;

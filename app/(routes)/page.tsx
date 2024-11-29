@@ -1,5 +1,3 @@
-import getBillboard from "@/actions/get-billboard";
-import getProducts from "@/actions/get-products";
 import Billboard from "@/components/billboard";
 import { products } from "@/data";
 import ProductList from "@/components/product-list";
