@@ -1,13 +1,16 @@
 import getBillboard from "@/actions/get-billboard";
 import getProducts from "@/actions/get-products";
 import Billboard from "@/components/billboard";
-
+import { products } from "@/data";
 import ProductList from "@/components/product-list";
 
 export const revalidate = 0;
 const HomePage = async () => {
-  const billboard = await getBillboard("e2620e77-058d-407c-9178-04aeec533f16");
-  const products = await getProducts({ isFeatured: "true" });
+  const billboard = {
+    id: "1",
+    label: "عروض مميزة",
+    imageUrl: "/images/billboard.jpg",
+  };
 
   return (
     <>

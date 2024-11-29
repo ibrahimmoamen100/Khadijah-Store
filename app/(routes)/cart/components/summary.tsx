@@ -34,38 +34,47 @@ const Summary = () => {
   const totalPrice = items.reduce((total, item) => {
     return total + Number(item.price);
   }, 0);
-  console.log(`${process.env.NEXT_PUBLIC_API_URL}/checkout`);
-  const onCheckout = async () => {
-    setLoading(true);
-
-    try {
-      const response = await axios.post(
-        `${process.env.NEXT_PUBLIC_API_URL}/checkout`,
-        {
-          productIds: items.map((item) => item.id),
-          customerDetails: customerInfo,
-        }
-      );
-
-      if (response.status === 200) {
-        toast.success("تم ارسال طلبك وسنتصل بك قريبا.");
-        setCustomerInfo({
-          address: "",
-          city: "",
-          country: "",
-          phone: "",
-        });
-
-        removeAll();
-      } else {
-        toast.error("Failed to place the order.");
-      }
-    } catch (error) {
-      console.error(error);
-      toast.error("في مشكله في الطلب   ");
-    } finally {
-      setLoading(false);
+  const onCheckout = () => {
+    if (
+      !customerInfo.phone ||
+      !customerInfo.address ||
+      !customerInfo.city ||
+      !customerInfo.country
+    ) {
+      toast.error("يرجى ملء جميع الحقول.");
+      return;
     }
+
+    // Format cart items into a readable string
+    const cartDetails = items
+      .map((item, index) => `${index + 1}. ${item.name} - ${item.price} جنيه`)
+      .join("\n");
+
+    // Total price
+    const totalPrice = items.reduce(
+      (total, item) => total + Number(item.price),
+      0
+    );
+
+    // Customer details
+    const customerDetails =
+      `الاسم: ${customerInfo.country}\n` +
+      `العنوان: ${customerInfo.address}, ${customerInfo.city}\n` +
+      `رقم التليفون: ${customerInfo.phone}`;
+
+    // WhatsApp message content
+    const message = encodeURIComponent(
+      `مرحبًا، أود تقديم طلب جديد:\n\n` +
+        `🛒 تفاصيل الطلب:\n${cartDetails}\n\n` +
+        `💰 المجموع الكلي: ${totalPrice} جنيه\n\n` +
+        `📍 تفاصيل العميل:\n${customerDetails}`
+    );
+
+    // WhatsApp URL
+    const whatsappURL = `https://wa.me/01024911062?text=${message}`;
+
+    // Redirect to WhatsApp
+    window.location.href = whatsappURL;
   };
 
   return (

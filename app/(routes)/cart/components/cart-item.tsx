@@ -23,13 +23,9 @@ const CartItem: React.FC<CartItemProps> = ({ data }) => {
           </div>
 
           <div className="mt-1 flex text-sm ">
-            <p className="text-gray-500  border-l ml-4  pl-4 border-gray-200">
-              {data.colors.map((color) => color.name).join(" - ")}
-            </p>
+            <p className="text-gray-500  border-l ml-4  pl-4 border-gray-200"></p>
 
-            <p className="text-gray-500  ">
-              {data.sizes.map((size) => size.name).join(" - ")}
-            </p>
+            <p className="text-gray-500  "></p>
           </div>
           <Currency value={data?.price} />
         </div>

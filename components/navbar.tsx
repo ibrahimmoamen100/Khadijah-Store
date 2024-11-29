@@ -3,10 +3,10 @@ import MainNav from "./main-nav";
 import getCategories from "@/actions/get-categories";
 import NavbarActions from "./navbar-actions";
 import Image from "next/image";
+import { categories } from "@/data";
 
 export const revalidate = 0;
 const Navbar = async () => {
-  const categories = await getCategories();
   return (
     <div className="border-b relative sticky-top top-0 bg-white">
       <div className="  flex h-auto items-center max-w-7xl py-2 m-auto px-2 sm:px-6 lg:px-8">

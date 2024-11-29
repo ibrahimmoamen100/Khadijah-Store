@@ -4,6 +4,7 @@ import Gallery from "@/components/gallery";
 import Info from "@/components/info";
 import ProductList from "@/components/product-list";
 import Container from "@/components/ui/container";
+import { products } from "@/data";
 
 interface ProductPageProps {
   params: {
@@ -11,12 +12,17 @@ interface ProductPageProps {
   };
 }
 const ProductPage: React.FC<ProductPageProps> = async ({ params }) => {
-  const product = await getProduct(params.productId);
+  const product = products.find((item) => item.id === params.productId);
   console.log(product);
-  const suggestedProducts = await getProducts({
-    categoryId: product?.category?.id,
-  });
+  const suggestedProducts = products.filter(
+    (item) => item.id !== params.productId
+  );
   console.log(product);
+
+  if (!product) {
+    return <div>Product not found</div>;
+  }
+
   return (
     <div>
       <Container>
@@ -34,5 +40,4 @@ const ProductPage: React.FC<ProductPageProps> = async ({ params }) => {
     </div>
   );
 };
-
 export default ProductPage;

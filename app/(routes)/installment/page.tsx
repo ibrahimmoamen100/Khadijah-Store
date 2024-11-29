@@ -47,9 +47,6 @@ export default function Installment() {
                 </strong>
                 <ul className="list-disc pl-6 space-y-2">
                   <li>
-                    يمكن تقسيطها على مدة تبدأ من شهر وحتى 6 شهور كحد أقصى.
-                  </li>
-                  <li>
                     يتم إضافة نسبة زيادة 9% لكل شهر على السعر الأصلي للمنتج.
                   </li>
                 </ul>
@@ -58,9 +55,6 @@ export default function Installment() {
               <li>
                 <strong> المنتجات التي يقل سعرها عن 3000 جنيه </strong>
                 <ul className="list-disc pl-6 space-y-2">
-                  <li>
-                    يمكن تقسيطها على مدة تبدأ من شهر وحتى 6 شهور كحد أقصى.
-                  </li>
                   <li>
                     يتم إضافة نسبة زيادة 11% لكل شهر على السعر الأصلي للمنتج.
                   </li>
