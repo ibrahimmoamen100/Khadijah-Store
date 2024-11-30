@@ -35,7 +35,13 @@ const CartItem: React.FC<CartItemProps> = ({ data }) => {
         <div className="absolute z-10 right-0 top-0">
           <IconButton onClick={onRemove} icon={<X size={15} />} />
         </div>
-        <Image src={data.images[0].url} fill alt={data?.name} />
+        {data.images[0].url}
+        <Image
+          src={data.images[0]?.url || "/images/placeholder.png"} // Fallback image
+          fill
+          alt={data?.name}
+          className="object-cover" // Ensures proper resizing
+        />{" "}
       </div>
     </li>
   );

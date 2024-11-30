@@ -16,7 +16,9 @@ const Info: React.FC<InfoProps> = ({ data }) => {
   };
   return (
     <div>
-      <h1 className="text-2xl font-bold text-gray-800">{data.name}</h1>
+      <h1 className="text-2xl font-bold text-gray-800 break-words">
+        {data.name}
+      </h1>
       <div className="mt-3 flex items-end justify-between">
         <p className="text-xl text-gray-900">
           <Currency value={data?.price} />
@@ -26,11 +28,11 @@ const Info: React.FC<InfoProps> = ({ data }) => {
       <div className="flex flex-col gap-y-6">
         <div className="flex items-center gap-x-4">
           <h3 className="font-semibold text-black">Size:</h3>
-          <div className="flex items-center gap-x-4">
-            {data?.sizes.map((size) => (
-              <div key={size.id} className="">
+          <div className="flex items-center gap-x-4 flex-wrap">
+            {data?.sizes?.map((size) => (
+              <div key={size} className="">
                 {" "}
-                {size.name}
+                {size}
               </div>
             ))}
           </div>
@@ -38,13 +40,13 @@ const Info: React.FC<InfoProps> = ({ data }) => {
         <div className="flex items-center gap-x-4">
           <h3 className="font-semibold text-black">Color:</h3>
 
-          {data?.colors.map((color) => (
-            <div key={color.id} className="">
+          {data?.colors?.map((color) => (
+            <div key={color} className="">
               {" "}
               <div
                 className="w-6 h-6  rounded-full border border-gray-600"
                 style={{
-                  backgroundColor: color.value,
+                  backgroundColor: color,
                 }}
               />{" "}
             </div>

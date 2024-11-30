@@ -15,9 +15,10 @@ export interface Product {
   category: Category;
   name: string;
   price: number;
+  realPrice?: number;
   isFeatured: boolean;
-  sizes: Size[];
-  colors: Color[];
+  sizes?: string[];
+  colors?: string[];
   images: Image[];
 }
 export interface Size {

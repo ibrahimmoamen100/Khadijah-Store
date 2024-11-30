@@ -1,15 +1,11 @@
 import Billboard from "@/components/billboard";
 import { products } from "@/data";
 import ProductList from "@/components/product-list";
+import { billboards } from "@/data";
 
 export const revalidate = 0;
 const HomePage = async () => {
-  const billboard = {
-    id: "1",
-    label: "عروض مميزة",
-    imageUrl: "/images/billboard.jpg",
-  };
-
+  const billboard = billboards[0];
   return (
     <>
       <Billboard data={billboard} />

@@ -19,10 +19,10 @@ const useCart = create(
         const currentItems = get().items;
         const existingItem = currentItems.find((item) => item.id === data.id);
         if (existingItem) {
-          return toast("Item already in cart.");
+          return toast("هذا المنتج موجود بالفعل في عربة التسوق");
         }
         set({ items: [...get().items, data] });
-        toast.success("Item added to cart.");
+        toast.success("تم ايضافه المنتج بنجاح");
       },
       removeItem: (data: Product) => {
         set({ items: [...get().items.filter((item) => item.id !== data.id)] });
