@@ -3,6 +3,7 @@ import { create } from "zustand";
 import { Product } from "@/types";
 import { persist, createJSONStorage } from "zustand/middleware";
 import toast from "react-hot-toast";
+import Swal from "sweetalert2";
 
 interface CartStore {
   items: Product[];
@@ -18,11 +19,35 @@ const useCart = create(
       addItem: (data: Product) => {
         const currentItems = get().items;
         const existingItem = currentItems.find((item) => item.id === data.id);
+
         if (existingItem) {
-          return toast("هذا المنتج موجود بالفعل في عربة التسوق");
+          Swal.fire({
+            icon: "info",
+            title: "المنتج موجود بالفعل",
+            text: "هذا المنتج موجود بالفعل في عربة التسوق! يمكنك زيارة السلة أو متابعة التسوق.",
+            showCancelButton: true,
+            confirmButtonText: "اذهب إلى السلة",
+            cancelButtonText: "مواصلة التسوق",
+          }).then((result) => {
+            if (result.isConfirmed) {
+              window.location.href = "/cart"; // الذهاب إلى صفحة السلة
+            }
+          });
+          return;
         }
         set({ items: [...get().items, data] });
-        toast.success("تم ايضافه المنتج بنجاح");
+        Swal.fire({
+          icon: "success",
+          title: "تم إضافة المنتج",
+          text: "تمت إضافة المنتج إلى السلة بنجاح! يمكنك زيارة السلة أو متابعة التسوق.",
+          showCancelButton: true,
+          confirmButtonText: "اذهب إلى السلة",
+          cancelButtonText: "مواصلة التسوق",
+        }).then((result) => {
+          if (result.isConfirmed) {
+            window.location.href = "/cart"; // الذهاب إلى صفحة السلة
+          }
+        });
       },
       removeItem: (data: Product) => {
         set({ items: [...get().items.filter((item) => item.id !== data.id)] });
