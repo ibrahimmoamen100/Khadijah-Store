@@ -257,4 +257,22 @@ Adidas
       },
     ],
   },
+  {
+    id: "p11",
+    category: categories.find((c) => c.id === "home")!,
+    name: `
+اطقم توزيع من شركة دريم سيليكون حرارى سعر الطقم
+ `,
+    price: 450,
+    realPrice: 400,
+    isFeatured: true,
+    sizes: [],
+    colors: ["blue", "white"],
+    images: [
+      {
+        id: "img1",
+        url: "/images/ssv.jpg",
+      },
+    ],
+  },
 ];
