@@ -126,4 +126,19 @@ export const products: Product[] = [
       { id: "img3", url: "/images/tr3.jpg" },
     ],
   },
+  {
+    id: "p7",
+    category: categories.find((c) => c.id === "closthes")!,
+    name: `
+    
+ترنج شتوي   
+Adidas
+ `,
+    price: 300,
+    realPrice: 300,
+    isFeatured: true,
+    sizes: ["Xl ", "L", "XXL"],
+    colors: ["black"],
+    images: [{ id: "img1", url: "/public/images/tr adidas.jpg" }],
+  },
 ];
