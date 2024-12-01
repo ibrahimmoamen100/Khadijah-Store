@@ -226,4 +226,34 @@ Adidas
       },
     ],
   },
+  {
+    id: "p10",
+    category: categories.find((c) => c.id === "closthes")!,
+    name: `
+◾خامة ميلتون ضد الوبرة والانكماش 
+◾تقفيل وفينيش عالي 
+◾بزنط (كابيشو)
+◾يوجد جيب امامي لتدفئة اليدين
+◾شكل شيك وجذاب 
+ `,
+    price: 280,
+    realPrice: 300,
+    isFeatured: true,
+    sizes: ["XL ", "L", "XXL", "3XL"],
+    colors: ["#bcbabd", "red", "white", "black"],
+    images: [
+      {
+        id: "img1",
+        url: "/images/wrc.jpg",
+      },
+      {
+        id: "img2",
+        url: "/images/wrc2.jpg",
+      },
+      {
+        id: "img3",
+        url: "/images/wrc3.jpg",
+      },
+    ],
+  },
 ];
