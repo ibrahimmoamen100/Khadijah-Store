@@ -139,6 +139,6 @@ Adidas
     isFeatured: true,
     sizes: ["Xl ", "L", "XXL"],
     colors: ["black"],
-    images: [{ id: "img1", url: "/public/images/tr adidas.jpg" }],
+    images: [{ id: "img1", url: "/images/tr adidas.jpg" }],
   },
 ];
