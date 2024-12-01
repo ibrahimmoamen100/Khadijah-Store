@@ -22,7 +22,7 @@ export const billboards: Billboard[] = [
   {
     id: "e2620e77-058d-407c-9178-04aeec533f16",
     label: " اكتشف اهم عروض الملابس في متجر المرج",
-    imageUrl: "/images/cover 2.png",
+    imageUrl: "/images/cover.png",
   },
 ];
 

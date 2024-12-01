@@ -11,12 +11,12 @@ const Navbar = async () => {
       <div className="  flex h-auto items-center max-w-7xl py-2 m-auto px-2 sm:px-6 lg:px-8">
         <Link className=" flex  gap-x-2  justify-center items-center" href="/">
           <Image
-            src="/image/logo2.png"
+            src="/images/logoo.png"
             alt="متجر المرج "
             className=" "
             title="متجر المرج "
-            width={180}
-            height={180}
+            width={100}
+            height={100}
           />
         </Link>
         <div className="flex flex-row justify-around items-center w-full gap-6 md:mr-8 mr-2 relative">
