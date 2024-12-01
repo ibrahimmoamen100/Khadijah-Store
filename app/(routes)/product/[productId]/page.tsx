@@ -11,14 +11,12 @@ interface ProductPageProps {
 }
 const ProductPage: React.FC<ProductPageProps> = async ({ params }) => {
   const product = products.find((item) => item.id === params.productId);
-  console.log(product);
   const suggestedProducts = products.filter(
     (item) => item.id !== params.productId
   );
-  console.log(product);
 
   if (!product) {
-    return <div>Product not found</div>;
+    return <div>المنتج غير موجود</div>;
   }
 
   return (

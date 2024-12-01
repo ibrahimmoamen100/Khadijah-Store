@@ -20,6 +20,11 @@ interface CategoryPageProps {
 const CategoryPage: React.FC<CategoryPageProps> = async ({ params }) => {
   const category = categories.find((item) => item.id === params.categoryId);
 
+  // Filter products that belong to this category
+  const filteredProducts = products.filter(
+    (product) => product.category.id === params.categoryId
+  );
+
   return (
     <div className="bg-white">
       <Container>
@@ -34,7 +39,7 @@ const CategoryPage: React.FC<CategoryPageProps> = async ({ params }) => {
             <div className="mt-6 lg:col-span-4 lg:mt-0">
               {products.length === 0 && <NoResults />}
               <div className="grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                {products.map((item) => (
+                {filteredProducts.map((item) => (
                   <ProductCard key={item.id} data={item} />
                 ))}
               </div>

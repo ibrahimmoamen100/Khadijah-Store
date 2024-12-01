@@ -114,7 +114,25 @@ const NavbarActions: React.FC<MainNavProps> = ({ data }) => {
           </Link>
           <Link
             onClick={handleClick}
-            href="/cart"
+            href="/add-my-products"
+            className={cn(
+              "text-sm font-medium transition-colors hover:text-gray-700    flex items-center rounded-full text-center justify-center text-black  bg-transparent border mb-2 border-gray-600 px-4 py-2 "
+            )}
+          >
+            اضافه منتجاتك
+          </Link>
+          <Link
+            onClick={handleClick}
+            href="/add-my-products"
+            className={cn(
+              "text-sm font-medium transition-colors hover:text-gray-700    flex items-center rounded-full text-center justify-center text-black  bg-transparent border mb-2 border-gray-600 px-4 py-2 "
+            )}
+          >
+            موقع مخزننا
+          </Link>
+          <Link
+            onClick={handleClick}
+            href="/deliver"
             className={cn(
               "text-sm font-medium transition-colors hover:text-gray-700    flex items-center rounded-full text-center justify-center text-black  bg-transparent border mb-2 border-gray-600 px-4 py-2 "
             )}

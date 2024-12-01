@@ -84,7 +84,7 @@ export default function Installment() {
         </div>
         <Image
           src="/image/pound101.png"
-          className=""
+          className="rounded-lg"
           alt=""
           width={600}
           height={600}

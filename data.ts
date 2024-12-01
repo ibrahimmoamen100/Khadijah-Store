@@ -74,7 +74,7 @@ export const products: Product[] = [
   },
   {
     id: "p4",
-    category: categories.find((c) => c.id === "home ")!,
+    category: categories.find((c) => c.id === "home")!,
     name: `
     
 اقوي أشكال أطقم الصواني الجرانيت💥
@@ -92,7 +92,7 @@ export const products: Product[] = [
   },
   {
     id: "p5",
-    category: categories.find((c) => c.id === "home ")!,
+    category: categories.find((c) => c.id === "home")!,
     name: `
     
 اقوي أشكال أطقم الطاسات الجرانيت💥
@@ -106,6 +106,24 @@ export const products: Product[] = [
       { id: "img1", url: "/images/tasat granet1.jpg" },
       { id: "img2", url: "/images/tasat granet2.jpg" },
       { id: "img3", url: "/images/tasat granet3.jpg" },
+    ],
+  },
+  {
+    id: "p6",
+    category: categories.find((c) => c.id === "closthes")!,
+    name: `
+    
+ترنج شتوي    
+ `,
+    price: 300,
+    realPrice: 300,
+    isFeatured: true,
+    sizes: ["Xl ", "L", "XXL"],
+    colors: ["black", "white"],
+    images: [
+      { id: "img1", url: "/images/tr1.jpg" },
+      { id: "img2", url: "/images/tr2.jpg" },
+      { id: "img3", url: "/images/tr3.jpg" },
     ],
   },
 ];

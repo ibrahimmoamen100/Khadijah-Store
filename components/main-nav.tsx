@@ -52,16 +52,23 @@ const MainNav: React.FC<MainNavProps> = ({ data }) => {
           </NavigationMenuItem>
 
           <NavigationMenuItem>
-            <Link href="/installment" legacyBehavior passHref>
+            <Link href="/deliver" legacyBehavior passHref>
               <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                 التوصيل والشحن
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <Link href="/installment" legacyBehavior passHref>
+            <Link href="/add-my-products" legacyBehavior passHref>
               <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                اضافه منتجي
+                اضافه منتجاتك
+              </NavigationMenuLink>
+            </Link>
+          </NavigationMenuItem>
+          <NavigationMenuItem>
+            <Link href="/location" legacyBehavior passHref>
+              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                موقع مخزننا
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>

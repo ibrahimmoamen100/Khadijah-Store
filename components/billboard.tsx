@@ -9,8 +9,6 @@ interface BillboardProps {
 }
 
 const Billboard: React.FC<BillboardProps> = ({ data }) => {
-  console.log(data);
-
   return (
     <div className=" overflow-hidden w-full mb-20  bg-red-600 rounded-none md:rounded-xl ">
       <div className="relative aspect-square md:aspect-[2.4/1] bg-orange-600 w-full h-full">
