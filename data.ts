@@ -1,13 +1,4 @@
 // data.ts
-import { Billboard, Category, Product, Size, Color } from "./types";
-
-export const billboards: Billboard[] = [
-  {
-    id: "e2620e77-058d-407c-9178-04aeec533f16",
-    label: " اكتشف اهم عروض متجر المرج",
-    imageUrl: "/images/dd.jpg",
-  },
-];
 
 // export const sizes: Size[] = [
 //   { id: "1", name: "Small", value: "S" },
@@ -24,6 +15,16 @@ export const billboards: Billboard[] = [
 //   { id: "6", name: "اخضر", value: "#38b24d" },
 //   { id: "7", name: "بني", value: "#3a0808" },
 // ];
+
+import { Billboard, Category, Product, Size, Color } from "./types";
+
+export const billboards: Billboard[] = [
+  {
+    id: "e2620e77-058d-407c-9178-04aeec533f16",
+    label: " اكتشف اهم عروض الملابس في متجر المرج",
+    imageUrl: "/images/cover2.png",
+  },
+];
 
 export const categories: Category[] = [
   {
