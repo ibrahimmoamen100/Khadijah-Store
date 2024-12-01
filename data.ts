@@ -9,21 +9,21 @@ export const billboards: Billboard[] = [
   },
 ];
 
-export const sizes: Size[] = [
-  { id: "1", name: "Small", value: "S" },
-  { id: "2", name: "Medium", value: "M" },
-  { id: "3", name: "Large", value: "L" },
-];
+// export const sizes: Size[] = [
+//   { id: "1", name: "Small", value: "S" },
+//   { id: "2", name: "Medium", value: "M" },
+//   { id: "3", name: "Large", value: "L" },
+// ];
 
-export const colors: Color[] = [
-  { id: "1", name: "ابيض", value: "#fff" },
-  { id: "2", name: "برتقالي", value: "#f50" },
-  { id: "3", name: "اسود", value: "#000" },
-  { id: "4", name: "احمر", value: "#d83738" },
-  { id: "5", name: "ازرق", value: "#3979b0" },
-  { id: "6", name: "اخضر", value: "#38b24d" },
-  { id: "7", name: "بني", value: "#3a0808" },
-];
+// export const colors: Color[] = [
+//   { id: "1", name: "ابيض", value: "#fff" },
+//   { id: "2", name: "برتقالي", value: "#f50" },
+//   { id: "3", name: "اسود", value: "#000" },
+//   { id: "4", name: "احمر", value: "#d83738" },
+//   { id: "5", name: "ازرق", value: "#3979b0" },
+//   { id: "6", name: "اخضر", value: "#38b24d" },
+//   { id: "7", name: "بني", value: "#3a0808" },
+// ];
 
 export const categories: Category[] = [
   {
@@ -140,5 +140,90 @@ Adidas
     sizes: ["Xl ", "L", "XXL"],
     colors: ["black"],
     images: [{ id: "img1", url: "/images/tr adidas.jpg" }],
+  },
+  {
+    id: "p8",
+    category: categories.find((c) => c.id === "home")!,
+    name: `
+طقم جرانيت دريم بوناسيرا 9 قطع 
+وجريل 28 
+
+ `,
+    price: 2300,
+    realPrice: 2000,
+    isFeatured: true,
+    sizes: ["28 ", "26", "24", "22", "20", "18"],
+    colors: ["blue"],
+    images: [
+      {
+        id: "img1",
+        url: "/images/dream.jpg",
+      },
+    ],
+  },
+  {
+    id: "p9",
+    category: categories.find((c) => c.id === "closthes")!,
+    name: `
+جاكت جلد مستورد
+
+ `,
+    price: 320,
+    realPrice: 300,
+    isFeatured: true,
+    sizes: ["XL ", "L", "XXL", "3XL"],
+    colors: ["#8e5329", "black", "#6c5b54"],
+    images: [
+      {
+        id: "img1",
+        url: "/images/ac1.jpg",
+      },
+      {
+        id: "img2",
+        url: "/images/ac2.jpg",
+      },
+      {
+        id: "img1",
+        url: "/images/ac3.jpg",
+      },
+    ],
+  },
+  {
+    id: "p9",
+    category: categories.find((c) => c.id === "closthes")!,
+    name: `
+ترنج شتوي خامه ممتازه
+
+ `,
+    price: 280,
+    realPrice: 300,
+    isFeatured: true,
+    sizes: ["XL ", "L", "XXL", "3XL"],
+    colors: ["#8e5329"],
+    images: [
+      {
+        id: "img1",
+        url: "/images/dc1.jpg",
+      },
+    ],
+  },
+  {
+    id: "p10",
+    category: categories.find((c) => c.id === "closthes")!,
+    name: `
+ترنج Adidas  
+
+ `,
+    price: 280,
+    realPrice: 300,
+    isFeatured: true,
+    sizes: ["XL ", "L", "XXL", "3XL"],
+    colors: ["#716e76"],
+    images: [
+      {
+        id: "img1",
+        url: "/images/d5.jpg",
+      },
+    ],
   },
 ];
