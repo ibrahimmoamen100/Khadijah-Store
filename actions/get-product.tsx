@@ -16,6 +16,7 @@ const getProduct = async (id: string): Promise<Product> => {
       id: product.category.id,
       name: product.category.name,
       billboard: product.category.billboard || null,
+      image: product.category.image,
     },
     sizes: product.sizes.map((ps: any) => ({
       id: ps.size.id,

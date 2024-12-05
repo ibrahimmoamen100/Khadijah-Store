@@ -49,6 +49,7 @@ const getProducts = async (query: Query): Promise<Product[]> => {
     category: {
       id: product.category.id,
       name: product.category.name,
+      imge: product.category.image,
       billboard: product.category.billboard || null, // Handle missing billboard
     },
     sizes: product.sizes.map((ps: any) => ({

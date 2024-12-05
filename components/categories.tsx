@@ -14,6 +14,7 @@ function Categories({ data }: Props) {
       <div className="flex flex-row gap-2 flex-grow w-full justify-between items-center ">
         {data.map((item) => (
           <Link
+            key={item.id}
             href={`/category/${item.id}`}
             className="flex-1  bg-red-600 w-full h-32 rounded-xl relative overflow-hidden p-4"
           >
