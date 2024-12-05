@@ -71,7 +71,7 @@ const Summary = () => {
     );
 
     // WhatsApp URL
-    const whatsappURL = `https://wa.me/201024911062?text=${message}`;
+    const whatsappURL = `https://wa.me/201507955392?text=${message}`;
 
     // Redirect to WhatsApp
     window.location.href = whatsappURL;
