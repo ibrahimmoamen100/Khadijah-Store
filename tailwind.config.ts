@@ -123,7 +123,7 @@ const config: Config = {
           "-webkit-text-stroke": "2px white",
         },
         ".text-stroke-sm": {
-          "-webkit-text-stroke": "1px black",
+          "-webkit-text-stroke": "1px white",
         },
         ".text-stroke-lg": {
           "-webkit-text-stroke": "3px black",
