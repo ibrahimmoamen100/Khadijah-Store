@@ -317,7 +317,7 @@ Adidas
   ضهر دوتس  تقيل 
 
  `,
-    price: 4600,
+    price: 650,
     realPrice: 4100,
     isFeatured: true,
     sizes: ["١.٦٠ * ٢.٤٠"],
@@ -342,8 +342,8 @@ Adidas
 بمقبض ذهبي
 
  `,
-    price: 650,
-    realPrice: 400,
+    price: 4600,
+    realPrice: 4100,
     isFeatured: true,
     sizes: ["32 "],
     colors: ["white"],
