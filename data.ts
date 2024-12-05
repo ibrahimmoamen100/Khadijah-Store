@@ -277,4 +277,127 @@ Adidas
       },
     ],
   },
+  {
+    id: "p12",
+    category: categories.find((c) => c.id === "home")!,
+    name: `
+السجاد الجوبلان  وش قطيفه  3دي 
+  ضهر دوتس  تقيل 
+
+ `,
+    price: 450,
+    realPrice: 200,
+    isFeatured: true,
+    sizes: ["80 سم * 200 سم"],
+    colors: ["blue", "white"],
+    images: [
+      {
+        id: "img1",
+        url: "/images/سجاده 1.jpg",
+      },
+      {
+        id: "img2",
+        url: "/images/سجاده 2.jpg",
+      },
+      {
+        id: "img3",
+        url: "/images/سجاده 3.jpg",
+      },
+      {
+        id: "img4",
+        url: "/images/سجاده 4.jpg",
+      },
+    ],
+  },
+  {
+    id: "p13",
+    category: categories.find((c) => c.id === "home")!,
+    name: `
+السجاد الجوبلان  وش قطيفه  3دي 
+  ضهر دوتس  تقيل 
+
+ `,
+    price: 4600,
+    realPrice: 4100,
+    isFeatured: true,
+    sizes: ["١.٦٠ * ٢.٤٠"],
+    colors: ["blue", "white"],
+    images: [
+      {
+        id: "img1",
+        url: "/images/سجاده كبير 1.jpg",
+      },
+      {
+        id: "img2",
+        url: "/images/سجاده كبير 2.jpg",
+      },
+    ],
+  },
+  {
+    id: "p13",
+    category: categories.find((c) => c.id === "home")!,
+    name: `
+طقم Bonera 
+10 قطع
+بمقبض ذهبي
+
+ `,
+    price: 650,
+    realPrice: 400,
+    isFeatured: true,
+    sizes: ["32 "],
+    colors: ["white"],
+    images: [
+      {
+        id: "img1",
+        url: "/images/طقم حلل 32 سم.jpg",
+      },
+    ],
+  },
+  {
+    id: "p14",
+    category: categories.find((c) => c.id === "home")!,
+    name: `
+طاسه تيفال
+
+ `,
+    price: 300,
+    realPrice: 190,
+    isFeatured: true,
+    sizes: ["22سم  ", "24سم ", "26سم"],
+    colors: ["#6791a9"],
+    images: [
+      {
+        id: "img1",
+        url: "/images/طقم تاسات.jpg",
+      },
+    ],
+  },
+  {
+    id: "p15",
+    category: categories.find((c) => c.id === "home")!,
+    name: `
+توزيع ماربل
+
+ `,
+    price: 425,
+    realPrice: 295,
+    isFeatured: true,
+    sizes: [],
+    colors: ["#6791a9"],
+    images: [
+      {
+        id: "img1",
+        url: "/images/توزيع 1.jpg",
+      },
+      {
+        id: "img2",
+        url: "/images/توزيع 2.jpg",
+      },
+      {
+        id: "img3",
+        url: "/images/توزيع3.jpg",
+      },
+    ],
+  },
 ];
